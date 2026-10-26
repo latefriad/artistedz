@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Meta Tags -->
+  <title>ArtisteDz | الجريدة الإلكترونية الرائدة للإعلام الفني - حليم زروقي Halim Zerrouki</title>
+  <meta name="title" content="ArtisteDz | الجريدة الإلكترونية الرائدة للإعلام الفني - حليم زروقي Halim Zerrouki" />
+  <meta name="description" content="جريدة ومجلة ArtisteDz الثقافية والسينمائية برئاسة الإعلامي والناقد حليم زروقي. حوارات حصرية مع نجوم السينما والموسيقى، نقد سينمائي، وتغطيات السجادة الحمراء للمهرجانات الكبرى بالهوية الرسمية الحمراء والبيضاء." />
+  <meta name="author" content="Halim Zerrouki - ArtisteDz" />
+  <meta name="keywords" content="ArtisteDz, حليم زروقي, Halim Zerrouki, سينما جزائرية, حوارات مشاهير, عبد القادر شاعو, منذر رياحنة, أكرم ماغ, Glasses Malone, Fada Vex, مهرجان كان, السجادة الحمراء, ثقافة, نقد سينمائي" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.facebook.com/ArtisteDz094" />
+  <meta property="og:title" content="ArtisteDz | Halim Zerrouki - حليم زروقي" />
+  <meta property="og:description" content="كل المقالات والحوارات هي عبارة عن لقاءات حصرية تابعة لـ ArtisteDZ مع الفنانين" />
+  <meta property="og:image" content="assets/images/halim_zerrouki_profile.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/halim_zerrouki_profile.jpg" />
+
+  <!-- Google Fonts: Frank Ruhl Libre (Writer Home 4), Amiri, Lora, Cairo, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;500;600;700;800;900&family=Frank+Ruhl+Libre:wght@400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandRed: '#e50914',
+            brandRedHover: '#b80710',
+            brandRedLight: '#ff3344',
+            brandRedSoft: '#fef2f2',
+            brandDark: '#000000',
+            brandPaper: '#faf9f6'
+          },
+          fontFamily: {
+            editorial: ['"Frank Ruhl Libre"', 'Amiri', 'Lora', 'serif'],
+            cairo: ['Cairo', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'Cairo', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet (Writer Home 4 Red & White Editorial Theme with Centered Titles & Black Words) -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-white text-black font-sans antialiased selection:bg-red-600 selection:text-white min-h-screen flex flex-col justify-between overflow-x-hidden">
+
+  <!-- ========================================================================
+       TOP BREAKING NEWS & VIP TICKER BAR (WHITE BACKGROUND & BLACK WORDS)
+       ======================================================================== -->
+  <aside class="relative z-50 bg-white text-black py-2 px-3 sm:px-4 text-xs border-b border-gray-200" aria-label="شريط الأخبار العاجلة">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-3 sm:gap-4">
+      
+      <!-- Breaking Label Badge in Brand Red -->
+      <div class="flex-shrink-0 flex items-center gap-1.5 sm:gap-2 font-black uppercase tracking-wider text-white bg-red-600 px-2.5 sm:px-3 py-1 rounded-full shadow-md shadow-red-600/30 text-[10px] sm:text-xs">
+        <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-white animate-pulse"></span>
+        <span data-i18n="nav-breaking-label">عاجل ArtisteDz</span>
+      </div>
+
+      <!-- Marquee Ticker in Pure Black Words -->
+      <div class="flex-1 overflow-hidden relative ticker-wrap">
+        <div id="tickerItems" class="ticker-content font-bold text-black text-xs">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+
+      <!-- Social & Direct Handles in Pure Black Words -->
+      <div class="hidden md:flex items-center gap-3 flex-shrink-0 text-black font-bold">
+        <a href="https://www.facebook.com/ArtisteDz094" target="_blank" rel="noopener noreferrer" class="hover:text-red-600 transition-colors flex items-center gap-1.5 font-black text-black">
+          <svg class="w-3.5 h-3.5 fill-current text-blue-600" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          <span class="text-black font-black">@ArtisteDz094</span>
+        </a>
+        <span class="text-gray-300">|</span>
+        <span class="text-black font-mono text-[11px] font-black">Halim Zerrouki Press Desk</span>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       REBUILT MODERN STICKY NAVBAR (RESPONSIVE, RED & WHITE, CENTERED TITLES)
+       ======================================================================== -->
+  <header class="sticky top-0 z-40 bg-white/98 backdrop-blur-lg border-b border-gray-200 transition-all duration-300 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo Zone: Studio Broadcast Microphone Emblem + Wordmark -->
+        <a href="#" class="flex items-center gap-3 group cursor-pointer flex-shrink-0" aria-label="ArtisteDz الرئيسية">
+          
+          <!-- Iconic Studio Broadcast Microphone Emblem in Red & White -->
+          <div class="relative w-11 h-11 rounded-2xl bg-gradient-to-br from-red-600 via-red-700 to-black p-2 flex items-center justify-center border border-red-500/50 group-hover:scale-105 transition-all duration-300 shadow-lg shadow-red-600/30 flex-shrink-0">
+            <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" fill="#ffffff"></path>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2" stroke="#ffffff"></path>
+              <line x1="12" y1="19" x2="12" y2="22" stroke="#ffffff"></line>
+              <line x1="8" y1="22" x2="16" y2="22" stroke="#ffffff"></line>
+            </svg>
+            <span class="absolute -bottom-1 -right-1 w-3 h-3 rounded-full bg-red-500 border-2 border-white animate-pulse"></span>
+          </div>
+
+          <!-- Brand Typography in Pure Black Words -->
+          <div class="flex flex-col">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-black tracking-tight text-black font-editorial group-hover:text-red-600 transition-colors">ArtisteDz</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-red-600 text-white font-black tracking-wider shadow-sm">VIP</span>
+            </div>
+            <span class="text-[11px] text-black font-bold -mt-0.5 hidden sm:flex items-center gap-1.5">
+              <span class="text-black font-black">جريدة حليم زروقي الفنية</span>
+              <span class="text-gray-300">•</span>
+              <span class="text-black font-mono font-black">@halim.zerrouki</span>
+            </span>
+          </div>
+
+        </a>
+
+        <!-- Center Desktop Navigation Links in Pure Black Words with Red Accents -->
+        <nav class="hidden xl:flex items-center gap-1 text-sm font-black text-black" aria-label="القائمة الرئيسية">
+          <a href="#" class="px-3 py-2 rounded-xl text-black font-black hover:text-red-600 hover:bg-red-50 transition-all" data-i18n="nav-home">الرئيسية</a>
+          <a href="#blogFeedSection" class="px-3 py-2 rounded-xl text-black font-black hover:text-red-600 hover:bg-red-50 transition-all">الجديد</a>
+          <a href="#about" class="px-3 py-2 rounded-xl text-black font-black hover:text-red-600 hover:bg-red-50 transition-all" data-i18n="nav-about">عن حليم زروقي</a>
+          <a href="#coverage" class="px-3 py-2 rounded-xl text-black font-black hover:text-red-600 hover:bg-red-50 transition-all" data-i18n="nav-coverage">أعمالنا وتغطياتنا</a>
+          <a href="#artists" class="px-3 py-2 rounded-xl text-black font-black hover:text-red-600 hover:bg-red-50 transition-all" data-i18n="nav-artists">الفنانون</a>
+          <a href="#journal" class="px-3 py-2 rounded-xl text-black font-black hover:text-red-600 hover:bg-red-50 transition-all" data-i18n="nav-journal">المجلة النقدية</a>
+          <a href="#events" class="px-3 py-2 rounded-xl text-black font-black hover:text-red-600 hover:bg-red-50 transition-all">المهرجانات</a>
+          <a href="#contact" class="px-3 py-2 rounded-xl text-black font-black hover:text-red-600 hover:bg-red-50 transition-all" data-i18n="nav-contact">حجز التغطيات</a>
+        </nav>
+
+        <!-- Right Side Controls (Search + Language + Bag + CTA + Hamburger) -->
+        <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+          
+          <!-- Quick Search Icon Button (Focuses Search Bar) -->
+          <a href="#coverage" onclick="setTimeout(() => document.getElementById('coverageSearchInput')?.focus(), 400)" class="p-2 sm:p-2.5 rounded-xl bg-gray-100 hover:bg-red-50 border border-gray-300 text-black hover:text-red-600 transition-all flex items-center justify-center cursor-pointer" title="بحث سريع في الأرشيف">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          </a>
+
+          <!-- Trilingual Language Switcher Pills in Black & Red -->
+          <div class="flex items-center bg-gray-100 border border-gray-300 rounded-xl p-1 text-xs font-black">
+            <button onclick="window.ArtisteDzApp.setLanguage('ar')" data-lang-btn="ar" class="px-2 sm:px-2.5 py-1 rounded-lg transition-all font-black text-black">العربية</button>
+            <button onclick="window.ArtisteDzApp.setLanguage('fr')" data-lang-btn="fr" class="px-2 sm:px-2.5 py-1 rounded-lg transition-all font-black text-black">FR</button>
+            <button onclick="window.ArtisteDzApp.setLanguage('en')" data-lang-btn="en" class="px-2 sm:px-2.5 py-1 rounded-lg transition-all font-black text-black">EN</button>
+          </div>
+
+          <!-- Official Bag / VIP Press Kit Badge -->
+          <a href="#contact" class="relative p-2 sm:p-2.5 rounded-xl bg-gray-100 hover:bg-red-50 border border-gray-300 text-black hover:text-red-600 transition-all hidden sm:flex items-center justify-center group" title="VIP Press Kits & Bookings">
+            <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+            <span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-red-600 text-white font-black text-[10px] flex items-center justify-center border-2 border-white shadow-sm">0</span>
+          </a>
+
+          <!-- Book Coverage CTA Button (Red & White) -->
+          <a href="#contact" class="btn-brand-red hidden md:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-black text-xs sm:text-sm shadow-md" data-i18n="nav-cta">
+            <svg class="w-4 h-4 fill-current text-white" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 002 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10z"/></svg>
+            <span>طلب تغطية إعلامية</span>
+          </a>
+
+          <!-- Mobile Hamburger Menu Button -->
+          <button id="mobileMenuBtn" class="xl:hidden p-2 sm:p-2.5 rounded-xl bg-gray-100 border-2 border-black text-black hover:bg-red-600 hover:text-white transition-colors focus:outline-none cursor-pointer" aria-label="فتح القائمة الرئيسية">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       REBUILT MOBILE SLIDE-OVER DRAWER (FULL RESPONSIVE TOUCH MENU)
+       ======================================================================== -->
+  <div id="mobileMenu" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-md hidden transition-opacity">
+    <div class="fixed inset-y-0 right-0 rtl:right-0 rtl:left-auto ltr:left-0 ltr:right-auto w-full max-w-sm sm:max-w-md bg-white shadow-2xl flex flex-col justify-between p-6 overflow-y-auto">
+      
+      <!-- Drawer Header -->
+      <div class="flex items-center justify-between border-b border-gray-200 pb-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-red-600 text-white flex items-center justify-center font-black shadow-md">ADZ</div>
+          <div>
+            <span class="text-xl font-black text-black font-editorial">ArtisteDz</span>
+            <span class="text-[10px] block text-red-600 font-mono font-black">@halim.zerrouki</span>
+          </div>
+        </div>
+        <button id="mobileMenuClose" class="p-2 rounded-xl bg-gray-100 text-black hover:bg-red-600 hover:text-white transition-colors cursor-pointer" aria-label="إغلاق القائمة">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+
+      <!-- Drawer Language Switcher Row -->
+      <div class="py-4 border-b border-gray-100 flex items-center justify-between">
+        <span class="text-xs font-black text-black">اختر لغة العرض:</span>
+        <div class="flex items-center bg-gray-100 border border-gray-300 rounded-xl p-1 text-xs font-black">
+          <button onclick="window.ArtisteDzApp.setLanguage('ar')" data-lang-btn="ar" class="px-3 py-1 rounded-lg transition-all font-black text-black">العربية</button>
+          <button onclick="window.ArtisteDzApp.setLanguage('fr')" data-lang-btn="fr" class="px-3 py-1 rounded-lg transition-all font-black text-black">FR</button>
+          <button onclick="window.ArtisteDzApp.setLanguage('en')" data-lang-btn="en" class="px-3 py-1 rounded-lg transition-all font-black text-black">EN</button>
+        </div>
+      </div>
+
+      <!-- Vertical Links with Large Touch Targets -->
+      <nav class="flex flex-col gap-2 py-6 text-base font-black text-black">
+        <a href="#" data-mobile-nav-link class="px-4 py-3 rounded-xl hover:bg-red-50 hover:text-red-600 transition-colors flex items-center justify-between" data-i18n="nav-home">
+          <span>الرئيسية</span>
+          <span class="text-red-600 font-bold rtl:rotate-180">→</span>
+        </a>
+        <a href="#blogFeedSection" data-mobile-nav-link class="px-4 py-3 rounded-xl hover:bg-red-50 hover:text-red-600 transition-colors flex items-center justify-between">
+          <span>الجديد في المجلة</span>
+          <span class="text-red-600 font-bold rtl:rotate-180">→</span>
+        </a>
+        <a href="#about" data-mobile-nav-link class="px-4 py-3 rounded-xl hover:bg-red-50 hover:text-red-600 transition-colors flex items-center justify-between" data-i18n="nav-about">
+          <span>من هو حليم زروقي؟</span>
+          <span class="text-red-600 font-bold rtl:rotate-180">→</span>
+        </a>
+        <a href="#coverage" data-mobile-nav-link class="px-4 py-3 rounded-xl hover:bg-red-50 hover:text-red-600 transition-colors flex items-center justify-between" data-i18n="nav-coverage">
+          <span>أعمالنا وتغطياتنا</span>
+          <span class="text-red-600 font-bold rtl:rotate-180">→</span>
+        </a>
+        <a href="#artists" data-mobile-nav-link class="px-4 py-3 rounded-xl hover:bg-red-50 hover:text-red-600 transition-colors flex items-center justify-between" data-i18n="nav-artists">
+          <span>الفنانون الذين تعاملنا معهم</span>
+          <span class="text-red-600 font-bold rtl:rotate-180">→</span>
+        </a>
+        <a href="#journal" data-mobile-nav-link class="px-4 py-3 rounded-xl hover:bg-red-50 hover:text-red-600 transition-colors flex items-center justify-between" data-i18n="nav-journal">
+          <span>المجلة النقدية</span>
+          <span class="text-red-600 font-bold rtl:rotate-180">→</span>
+        </a>
+        <a href="#events" data-mobile-nav-link class="px-4 py-3 rounded-xl hover:bg-red-50 hover:text-red-600 transition-colors flex items-center justify-between">
+          <span>المهرجانات والتظاهرات</span>
+          <span class="text-red-600 font-bold rtl:rotate-180">→</span>
+        </a>
+        <a href="#contact" data-mobile-nav-link class="px-4 py-3 rounded-xl hover:bg-red-50 hover:text-red-600 transition-colors flex items-center justify-between" data-i18n="nav-contact">
+          <span>حجز التغطيات والشراكات</span>
+          <span class="text-red-600 font-bold rtl:rotate-180">→</span>
+        </a>
+      </nav>
+
+      <!-- Drawer Actions & Contacts -->
+      <div class="space-y-4 pt-4 border-t border-gray-200">
+        <a href="#contact" data-mobile-nav-link class="btn-brand-red w-full py-4 rounded-xl text-white font-black text-center block shadow-lg">
+          طلب تغطية إعلامية فورية
+        </a>
+        <div class="flex items-center justify-center gap-4 text-xs font-black text-black pt-1">
+          <a href="tel:+213550949494" class="hover:text-red-600">📞 +213 550 94 94 94</a>
+          <span>•</span>
+          <a href="https://www.facebook.com/ArtisteDz094" target="_blank" rel="noopener noreferrer" class="hover:text-red-600">Facebook</a>
+        </div>
+        <div class="text-center text-[11px] text-black font-bold pt-1">
+          جريدة ومجلة ArtisteDz • إشراف حليم زروقي
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       HERO / SLIDER SHOWCASE (WRITER HOME 4 CINEMATIC SLIDER - CENTERED TITLES)
+       ======================================================================== -->
+  <section id="heroSlider" class="relative w-full overflow-hidden bg-black select-none" aria-label="أبرز التغطيات والحوارات">
+    
+    <!-- Slide Progress Bar Line (Red & White) -->
+    <div class="slide-progress-bar w-full absolute top-0 inset-x-0 z-30">
+      <div id="sliderProgress" class="slide-progress-fill"></div>
+    </div>
+
+    <!-- Slides Track -->
+    <div id="slideTrack" class="flex transition-transform duration-700 ease-out">
+      <!-- Populated dynamically by app.js with centered content -->
+    </div>
+
+    <!-- Slider Navigation Arrows (Responsive for Mobile & Desktop) -->
+    <div class="absolute inset-y-0 inset-x-2 sm:inset-x-8 flex items-center justify-between pointer-events-none z-20">
+      <button id="sliderPrev" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/90 hover:bg-red-600 text-black hover:text-white border-2 border-black hover:border-red-600 pointer-events-auto flex items-center justify-center transition-all transform hover:scale-110 shadow-2xl cursor-pointer" aria-label="السابق">
+        <svg class="w-5 h-5 sm:w-6 sm:h-6 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
+      </button>
+      <button id="sliderNext" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/90 hover:bg-red-600 text-black hover:text-white border-2 border-black hover:border-red-600 pointer-events-auto flex items-center justify-center transition-all transform hover:scale-110 shadow-2xl cursor-pointer" aria-label="التالي">
+        <svg class="w-5 h-5 sm:w-6 sm:h-6 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+      </button>
+    </div>
+
+    <!-- Slider Pagination Dots -->
+    <div class="absolute bottom-6 inset-x-0 z-20 flex items-center justify-center gap-2">
+      <div id="sliderDots" class="flex items-center gap-2 bg-white/95 px-4 py-2 rounded-full border border-gray-300 shadow-md">
+        <!-- Populated dynamically by app.js -->
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ========================================================================
+       SECTION 01: "BLOG FEED" / LATEST FROM THE BLOG (CENTERED TITLES)
+       ======================================================================== -->
+  <section id="blogFeedSection" class="py-16 sm:py-20 lg:py-24 bg-white border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-12">
+      
+      <!-- Section Header: Centered Subtitle & Title -->
+      <div class="text-center space-y-2 max-w-2xl mx-auto flex flex-col items-center justify-center">
+        <span class="writer-subtitle">BLOG FEED</span>
+        <h2 class="writer-title text-black text-center mt-2">Latest From the Journal</h2>
+        <p class="text-black text-xs sm:text-sm sm:text-base font-bold text-center max-w-xl mx-auto">
+          أحدث المقالات، التحقيقات السينمائية، وجلسات البوح الفني الحصرية المنشورة في جريدة ArtisteDz
+        </p>
+      </div>
+
+      <!-- 4-Card Blog Feed Grid: Responsive (1 Col Mobile, 2 Col Tablet, 4 Col Desktop) -->
+      <div id="blogFeedGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <!-- Populated dynamically by app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 02: "WHO WE ARE" / ABOUT HALIM ZERROUKI (CENTERED TITLES)
+       ======================================================================== -->
+  <section id="about" class="py-16 sm:py-20 lg:py-28 bg-[#faf9f6] border-b border-gray-200 relative overflow-hidden">
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12 sm:space-y-16">
+      
+      <!-- Section Header: Centered Subtitle & Title -->
+      <div class="text-center space-y-2 max-w-3xl mx-auto flex flex-col items-center justify-center">
+        <span class="writer-subtitle">WHO WE ARE</span>
+        <h2 class="writer-title text-black text-center mt-2">
+          We Document Culture, Film and Music with Passion, Precision and Style.
+        </h2>
+        <p class="text-black text-xs sm:text-sm sm:text-base max-w-2xl mx-auto font-bold text-center">
+          نوثّق الإبداع الجزائري والمغاربي ونبني جسور التواصل مع صناعة السينما ونجوم الفن العالمي بدقة صحفية ومصداقية مستقلة.
+        </p>
+      </div>
+
+      <!-- Bio Container (Editorial Profile in Red & White & Centered Text) -->
+      <div id="aboutContent">
+        <!-- Populated dynamically by app.js -->
+      </div>
+
+      <!-- Quick KPI / Metric Counters in Clean White Cards & Black Words -->
+      <div class="space-y-4">
+        <div class="flex items-center justify-center gap-3 text-center">
+          <span class="w-8 h-1 bg-red-600 rounded-full"></span>
+          <span class="text-xs uppercase font-black tracking-widest text-black">إحصائيات الإنجاز والوصول الإعلامي</span>
+          <span class="w-8 h-1 bg-red-600 rounded-full"></span>
+        </div>
+        <div id="kpiGrid" class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+          <!-- Populated dynamically by app.js -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 03: "LARGE COLLECTIONS" / OUR WORK & COVERAGE (CENTERED TITLES)
+       ======================================================================== -->
+  <section id="coverage" class="py-16 sm:py-20 lg:py-28 bg-white border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-12">
+      
+      <!-- Section Header: Centered Subtitle & Title -->
+      <div class="text-center space-y-3 max-w-3xl mx-auto flex flex-col items-center justify-center">
+        <span class="writer-subtitle">LARGE COLLECTIONS</span>
+        <h2 class="writer-title text-black text-center mt-2">
+          Exclusive Interviews, Film Reviews & Red Carpets
+        </h2>
+        <p class="text-black text-xs sm:text-sm sm:text-base leading-relaxed font-bold text-center max-w-2xl mx-auto">
+          مكتبة إعلامية متكاملة تضم لقاءات حصرية، مراجعات سينمائية نقدية، وتغطيات السجادات الحمراء لكبرى المحافل الفنية.
+        </p>
+
+        <!-- Centered Search Bar -->
+        <div class="w-full max-w-md mx-auto pt-4 relative">
+          <input 
+            type="text" 
+            id="coverageSearchInput" 
+            placeholder="ابحث عن فنان، عمل، أو مهرجان..." 
+            class="w-full bg-[#faf9f6] border-2 border-black rounded-xl px-4 py-3 text-xs sm:text-sm text-black placeholder-black focus:outline-none focus:border-red-600 focus:bg-white transition-all pr-10 rtl:pr-10 rtl:pl-4 ltr:pl-10 shadow-sm font-bold text-center" 
+          />
+          <div class="absolute inset-y-0 right-3 rtl:right-3 rtl:left-auto ltr:left-3 ltr:right-auto flex items-center pointer-events-none text-black">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs (Centered & Scrollable on Mobile) -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none justify-start sm:justify-center w-full" id="coverageFilterTabs">
+        <!-- Populated dynamically by app.js -->
+      </div>
+
+      <!-- Coverage Cards Grid: Responsive across Mobile, Tablet, Desktop -->
+      <div id="coverageGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+        <!-- Populated dynamically by app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 04: "COLLABORATIONS & ARTISTS" (CENTERED TITLES)
+       ======================================================================== -->
+  <section id="artists" class="py-16 sm:py-20 lg:py-28 bg-[#faf9f6] border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-12">
+      
+      <!-- Section Header: Centered Subtitle & Title -->
+      <div class="text-center space-y-2 max-w-3xl mx-auto flex flex-col items-center justify-center">
+        <span class="writer-subtitle">OUR COLLABORATIONS</span>
+        <h2 class="writer-title text-black text-center mt-2">
+          Artists, Directors & Cultural Icons
+        </h2>
+        <p class="text-black text-xs sm:text-sm sm:text-base font-bold text-center max-w-2xl mx-auto">
+          نخبة من عمالقة الفن والشعبي، نجوم السينما والدراما، ورواد موسيقى الراب والهيب هوب الذين استضافهم حليم زروقي
+        </p>
+      </div>
+
+      <!-- Infinite Auto-Scrolling Marquee Track in Red & White & Black Words -->
+      <div class="relative overflow-hidden py-4 -mx-4 sm:-mx-6 lg:-mx-8">
+        <div class="absolute inset-y-0 left-0 w-16 sm:w-24 bg-gradient-to-r from-[#faf9f6] to-transparent z-10 pointer-events-none"></div>
+        <div class="absolute inset-y-0 right-0 w-16 sm:w-24 bg-gradient-to-l from-[#faf9f6] to-transparent z-10 pointer-events-none"></div>
+        
+        <div id="artistsMarquee" class="marquee-track flex items-center">
+          <!-- Populated dynamically by app.js -->
+        </div>
+      </div>
+
+      <!-- Interactive Talent Directory Grid (Centered Header & Responsive Cards) -->
+      <div class="pt-6">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pb-6 border-b border-gray-200 text-center">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-red-600"></span>
+            <span class="font-black text-sm text-black">دليل النجوم والمحاورات الموثقة (+30 فنان)</span>
+          </div>
+          <span class="text-xs text-black font-black bg-white border border-black px-3 py-1 rounded-full">أرشيف حي ومحدث</span>
+        </div>
+        
+        <div id="artistsGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-5 pt-6">
+          <!-- Populated dynamically by app.js -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 05: "WHAT TO READ / MOST POPULAR" (CENTERED TITLES)
+       ======================================================================== -->
+  <section id="journal" class="py-16 sm:py-20 lg:py-28 bg-white border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-12">
+      
+      <!-- Section Header: Centered Subtitle & Title -->
+      <div class="text-center space-y-2 max-w-3xl mx-auto flex flex-col items-center justify-center">
+        <span class="writer-subtitle">WHAT TO READ</span>
+        <h2 class="writer-title text-black text-center mt-2">
+          Most Popular Reviews & In-Depth Critiques
+        </h2>
+        <p class="text-black text-xs sm:text-sm sm:text-base font-bold text-center max-w-2xl mx-auto">
+          مقالات نقدية وتحليلات جمالية لصناعة الفن السابع، الدراما الرمضانية، وتطور المشهد الموسيقي بقلم حليم زروقي.
+        </p>
+        <div class="inline-flex items-center gap-2 text-xs font-black text-black bg-white border-2 border-black px-4 py-1.5 rounded-xl mx-auto mt-2">
+          <span>قراءات وتقييمات الناقد</span>
+          <span class="text-red-600 font-bold">★ ★ ★ ★ ★</span>
+        </div>
+      </div>
+
+      <!-- Journal Articles Grid: Responsive (1 Col Mobile, 3 Col Desktop) -->
+      <div id="journalGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+        <!-- Populated dynamically by app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 06: "OUR EVENTS" / MAJOR FESTIVALS (CENTERED TITLES)
+       ======================================================================== -->
+  <section id="events" class="py-16 sm:py-20 lg:py-28 bg-[#faf9f6] border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-12">
+      
+      <!-- Section Header: Centered Subtitle & Title -->
+      <div class="text-center space-y-2 max-w-3xl mx-auto flex flex-col items-center justify-center">
+        <span class="writer-subtitle">OUR EVENTS</span>
+        <h2 class="writer-title text-black text-center mt-2">
+          Major Film Festivals & Cultural Highlights
+        </h2>
+        <p class="text-black text-xs sm:text-sm sm:text-base font-bold text-center max-w-2xl mx-auto">
+          تغطيات ميدانية مباشرة ورسمية من قاعات العرض والسجادات الحمراء لأبرز التظاهرات السينمائية والمسرحية
+        </p>
+      </div>
+
+      <!-- 4 Events Grid: Responsive (1 Col Mobile, 2 Col Tablet, 4 Col Desktop) -->
+      <div id="eventsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <!-- Populated dynamically by app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 07: NEWSLETTER & PRESS ACCESS STRIP (CENTERED CARD & TITLES)
+       ======================================================================== -->
+  <section class="py-12 sm:py-16 bg-white border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-[#faf9f6] rounded-2xl sm:rounded-3xl p-6 sm:p-10 lg:p-12 text-black border-2 border-red-600 shadow-xl relative overflow-hidden flex flex-col items-center justify-center text-center space-y-6 max-w-4xl mx-auto">
+        
+        <div class="space-y-3 max-w-2xl mx-auto text-center">
+          <span class="text-xs font-black uppercase tracking-widest text-white bg-red-600 px-3 py-1 rounded-full inline-block shadow-sm">نشرة الصحافة والمشتركين</span>
+          <h3 class="text-xl sm:text-3xl font-black text-black font-editorial text-center mt-2">
+            اشترك في النشرة الدورية لـ ArtisteDz
+          </h3>
+          <p class="text-xs sm:text-sm text-black leading-relaxed font-bold text-center">
+            احصل أولاً بأول على الحوارات الحصرية الجديدة، مراجعات الأفلام، ودعوات التغطيات الخاصة بالسجادة الحمراء مباشرة في بريدك.
+          </p>
+        </div>
+
+        <form id="newsletterForm" onsubmit="window.ArtisteDzApp.handleNewsletter(event)" class="w-full max-w-md mx-auto flex flex-col sm:flex-row gap-3">
+          <input 
+            type="email" 
+            required 
+            placeholder="أدخل بريدك الإلكتروني..." 
+            class="flex-1 bg-white text-black placeholder-black rounded-xl px-4 py-3.5 text-xs sm:text-sm focus:outline-none border-2 border-black font-black text-center sm:text-start"
+          />
+          <button type="submit" class="btn-brand-red text-white font-black text-xs sm:text-sm px-6 py-3.5 rounded-xl transition-all shadow-xl whitespace-nowrap cursor-pointer">
+            اشتراك مجاني
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 08: "HAVE A PROJECT?" / BOOKING & PRESS DESK (CENTERED TITLES)
+       ======================================================================== -->
+  <section id="contact" class="py-16 sm:py-20 lg:py-28 bg-[#faf9f6]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
+      
+      <!-- Section Header: Centered Subtitle & Title -->
+      <div class="text-center space-y-2 max-w-3xl mx-auto flex flex-col items-center justify-center">
+        <span class="writer-subtitle">HAVE A PROJECT?</span>
+        <h2 class="writer-title text-black text-center mt-2">
+          Want to Work With Halim Zerrouki?
+        </h2>
+        <p class="text-black text-xs sm:text-sm sm:text-base font-bold text-center max-w-2xl mx-auto">
+          تواصل مع المكتب الصحفي لجريدة ArtisteDz لطلب تغطية إعلامية حصرية، محاورة فنان، إدارة أعمال، أو رعاية محتوى سينمائي وثقافي.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        
+        <!-- Contact & Press Kit Information Column -->
+        <div class="lg:col-span-5 space-y-6 sm:space-y-8 text-start">
+          
+          <div class="writer-card p-6 sm:p-8 space-y-6 bg-white border border-gray-200 shadow-sm">
+            <div class="flex items-center gap-3 pb-4 border-b border-gray-200">
+              <div class="w-10 h-10 rounded-xl bg-red-600 text-white flex items-center justify-center font-black shadow-md">
+                ★
+              </div>
+              <div>
+                <h3 class="text-base sm:text-lg font-black text-black">المكتب الصحفي المركزي</h3>
+                <p class="text-xs text-red-600 font-black">ArtisteDz VIP Media Desk</p>
+              </div>
+            </div>
+
+            <div class="space-y-4 text-xs sm:text-sm font-bold">
+              <div class="flex items-start gap-3">
+                <span class="text-red-600 mt-0.5 font-bold">📍</span>
+                <div>
+                  <span class="font-black text-black block">المقر والموقع:</span>
+                  <span class="text-black font-bold">وسط العاصمة، الجزائر (Alger, Algérie)</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <span class="text-red-600 mt-0.5 font-bold">📞</span>
+                <div>
+                  <span class="font-black text-black block">الهاتف المباشر / واتساب الصحافة:</span>
+                  <a href="tel:+213550949494" class="text-black font-mono font-black hover:text-red-600" dir="ltr">+213 550 94 94 94</a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <span class="text-red-600 mt-0.5 font-bold">✉️</span>
+                <div>
+                  <span class="font-black text-black block">البريد الإلكتروني للتحرير:</span>
+                  <a href="mailto:contact@artistedz.com" class="text-black font-black hover:text-red-600 font-mono">contact@artistedz.com</a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <span class="text-red-600 mt-0.5 font-bold">🔗</span>
+                <div>
+                  <span class="font-black text-black block">الصفحة الرسمية على فيسبوك:</span>
+                  <a href="https://www.facebook.com/ArtisteDz094" target="_blank" rel="noopener noreferrer" class="text-black font-black hover:text-red-600">fb.com/ArtisteDz094</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Authentic Motto Box in Pure Black Words -->
+            <div class="writer-pullquote text-xs text-black font-black leading-relaxed">
+              <strong class="text-red-600 block mb-1">البيان الرسمي المعتمد:</strong>
+              «كل المقالات والحوارات هي عبارة عن لقاءات حصرية تابعة لـ ArtisteDZ مع الفنانين.»
+            </div>
+          </div>
+
+          <!-- Media Kit Download Card in Red & White -->
+          <div class="writer-card p-6 bg-red-600 text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl text-center sm:text-start">
+            <div class="space-y-1">
+              <h4 class="text-base font-black text-white">الملف الإعلامي الرسمي 2026</h4>
+              <p class="text-xs text-white/95 font-bold">أرقام القراء، باقات الفيديو، وأسعار الرعاية</p>
+            </div>
+            <button onclick="window.ArtisteDzApp.downloadMediaKit()" class="bg-white text-black hover:bg-gray-100 font-black text-xs px-5 py-3 rounded-xl transition-all shadow-md whitespace-nowrap cursor-pointer w-full sm:w-auto">
+              تحميل PDF
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Interactive Booking Form in All Words Black -->
+        <div class="lg:col-span-7">
+          <form id="bookingForm" onsubmit="window.ArtisteDzApp.handleBookingSubmit(event)" class="writer-card p-6 sm:p-10 space-y-6 bg-white border border-gray-200 shadow-sm text-start">
+            
+            <div class="border-b border-gray-200 pb-4">
+              <h3 class="text-lg sm:text-xl font-black text-black">استمارة طلب التغطية الإعلامية والشراكات</h3>
+              <p class="text-xs text-black font-bold mt-1">يرجى ملء البيانات بدقة لتتم معالجة طلبكم والرد خلال 24 ساعة كحد أقصى.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="space-y-1.5">
+                <label class="block text-xs font-black text-black" data-booking-name-label>الاسم الكامل أو اسم الجهة / الفنان</label>
+                <input 
+                  type="text" 
+                  name="fullName" 
+                  required 
+                  placeholder="مثال: شركة إنتاج سينمائي / اسم الفنان" 
+                  data-booking-name-placeholder
+                  class="w-full bg-[#faf9f6] border border-gray-300 rounded-xl px-4 py-3 text-xs sm:text-sm text-black font-bold focus:outline-none focus:border-red-600 focus:bg-white transition-colors" 
+                />
+              </div>
+
+              <div class="space-y-1.5">
+                <label class="block text-xs font-black text-black" data-booking-email-label>البريد الإلكتروني المهني</label>
+                <input 
+                  type="email" 
+                  name="email" 
+                  required 
+                  placeholder="contact@company.com" 
+                  data-booking-email-placeholder
+                  class="w-full bg-[#faf9f6] border border-gray-300 rounded-xl px-4 py-3 text-xs sm:text-sm text-black font-bold focus:outline-none focus:border-red-600 focus:bg-white transition-colors" 
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="space-y-1.5">
+                <label class="block text-xs font-black text-black" data-booking-phone-label>رقم الهاتف / واتساب</label>
+                <input 
+                  type="tel" 
+                  name="phone" 
+                  required 
+                  placeholder="+213 550 00 00 94" 
+                  data-booking-phone-placeholder
+                  class="w-full bg-[#faf9f6] border border-gray-300 rounded-xl px-4 py-3 text-xs sm:text-sm text-black font-bold focus:outline-none focus:border-red-600 focus:bg-white transition-colors" 
+                />
+              </div>
+
+              <div class="space-y-1.5">
+                <label class="block text-xs font-black text-black" data-booking-service-label>الخدمة المطلوبة</label>
+                <select 
+                  id="serviceSelect" 
+                  name="service" 
+                  class="w-full bg-[#faf9f6] border border-gray-300 rounded-xl px-4 py-3 text-xs sm:text-sm text-black font-bold focus:outline-none focus:border-red-600 focus:bg-white transition-colors cursor-pointer"
+                >
+                  <!-- Populated by app.js -->
+                </select>
+              </div>
+            </div>
+
+            <div class="space-y-1.5">
+              <label class="block text-xs font-black text-black" data-booking-location-label>مكان الفعالية والتواريخ المقترحة</label>
+              <input 
+                type="text" 
+                name="location" 
+                placeholder="مثال: الجزائر العاصمة، وهران، قسنطينة، تونس، باريس، كان" 
+                data-booking-location-placeholder
+                class="w-full bg-[#faf9f6] border border-gray-300 rounded-xl px-4 py-3 text-xs sm:text-sm text-black font-bold focus:outline-none focus:border-red-600 focus:bg-white transition-colors" 
+              />
+            </div>
+
+            <div class="space-y-1.5">
+              <label class="block text-xs font-black text-black" data-booking-message-label>تفاصيل المشروع والأهداف الفنية</label>
+              <textarea 
+                rows="4" 
+                name="message" 
+                required 
+                placeholder="يرجى كتابة نبذة عن العمل الفني، أسماء الضيوف، والجدول الزمني..." 
+                data-booking-message-placeholder
+                class="w-full bg-[#faf9f6] border border-gray-300 rounded-xl px-4 py-3 text-xs sm:text-sm text-black font-bold focus:outline-none focus:border-red-600 focus:bg-white transition-colors"
+              ></textarea>
+            </div>
+
+            <button 
+              type="submit" 
+              id="formSubmitBtn" 
+              class="btn-brand-red w-full py-4 rounded-xl text-white font-black text-sm tracking-wide shadow-lg cursor-pointer"
+            >
+              <span>إرسال طلب التغطية الإعلامية</span>
+            </button>
+
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       EDITORIAL FOOTER (CLEAN WHITE CANVAS, ALL WORDS IN PURE BLACK)
+       ======================================================================== -->
+  <footer class="bg-white text-black pt-14 sm:pt-16 pb-12 border-t-4 border-red-600 border-b border-gray-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 pb-10 sm:pb-12 border-b border-gray-200">
+        
+        <!-- Column 1: Brand & Journalist Profile in Pure Black Words -->
+        <div class="lg:col-span-5 space-y-4 text-start">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-red-600 text-white flex items-center justify-center font-black shadow-md">
+              ADZ
+            </div>
+            <div>
+              <span class="text-2xl font-black text-black font-editorial tracking-tight">ArtisteDz</span>
+              <span class="text-[10px] block text-red-600 font-mono font-black">Journal Culturel & Cinéma</span>
+            </div>
+          </div>
+          
+          <p class="text-xs sm:text-sm text-black leading-relaxed font-bold" data-footer-about>
+            الجريدة الإلكترونية الرائدة للإعلام الفني وصناعة السينما في الجزائر، أسسها ويديرها الإعلامي والناقد السينمائي حليم زروقي، لتوثيق رواد الفن واكتشاف المواهب ونقل نبض السجادات الحمراء.
+          </p>
+
+          <div class="p-4 rounded-xl bg-[#faf9f6] border-2 border-red-600 text-xs text-black font-black">
+            <span class="text-red-600 font-black block mb-0.5">شعار الجريدة الرسمي:</span>
+            «كل المقالات والحوارات هي عبارة عن لقاءات حصرية تابعة لـ ArtisteDZ مع الفنانين.»
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links in Pure Black Words -->
+        <div class="lg:col-span-3 space-y-3 text-start">
+          <h4 class="text-black font-black text-sm uppercase tracking-wider">روابط سريعة</h4>
+          <ul class="space-y-2 text-xs text-black font-black">
+            <li><a href="#" class="hover:text-red-600 transition-colors">الرئيسية (Home)</a></li>
+            <li><a href="#blogFeedSection" class="hover:text-red-600 transition-colors">أحدث المقالات (Blog Feed)</a></li>
+            <li><a href="#about" class="hover:text-red-600 transition-colors">عن حليم زروقي (Who We Are)</a></li>
+            <li><a href="#coverage" class="hover:text-red-600 transition-colors">الأرشيف والتغطيات (Collections)</a></li>
+            <li><a href="#artists" class="hover:text-red-600 transition-colors">دليل الفنانين (Collaborations)</a></li>
+            <li><a href="#events" class="hover:text-red-600 transition-colors">مهرجانات السينما (Our Events)</a></li>
+            <li><a href="#contact" class="hover:text-red-600 transition-colors">حجز التغطيات (Booking)</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Social Channels & Facebook Page in Pure Black Words -->
+        <div class="lg:col-span-4 space-y-4 text-start">
+          <h4 class="text-black font-black text-sm uppercase tracking-wider">قنوات التواصل والمتابعة</h4>
+          <p class="text-xs text-black font-bold">
+            تابع التغطيات الحية، مقاطع الفيديو الحصرية، وكواليس المهرجانات عبر منصاتنا الرسمية:
+          </p>
+
+          <div class="flex flex-wrap gap-2 pt-2">
+            <!-- Facebook Button -->
+            <a href="https://www.facebook.com/ArtisteDz094" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-black transition-all shadow-md">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              <span>Facebook @ArtisteDz094</span>
+            </a>
+
+            <!-- YouTube Button -->
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-black transition-all shadow-md">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              <span>YouTube</span>
+            </a>
+
+            <!-- Instagram Button -->
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-gradient-to-tr from-yellow-500 via-pink-600 to-purple-700 text-white text-xs font-black transition-all shadow-md">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright & Bottom Row in Pure Black Words -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-black text-black text-center sm:text-start">
+        <p data-footer-rights>
+          جميع الحقوق محفوظة © 2026 جريدة ومجلة ArtisteDz الإلكترونية. بقيادة الإعلامي والناقد حليم زروقي.
+        </p>
+        <div class="flex items-center gap-4 justify-center">
+          <span class="text-red-600 font-black">الهوية الرسمية: أحمر وأبيض (Red & White)</span>
+          <span>•</span>
+          <a href="#about" class="text-black hover:text-red-600 transition-colors font-black">ميثاق الشرف الصحفي</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       MEDIA PREVIEW MODAL DIALOG (NATIVE HTML5 <dialog> - RESPONSIVE)
+       ======================================================================== -->
+  <dialog id="mediaModal" class="rounded-2xl sm:rounded-3xl shadow-2xl p-0 w-[94vw] sm:w-full max-w-2xl lg:max-w-3xl overflow-hidden backdrop:bg-black/75">
+    <div class="relative bg-white text-black border-2 border-black rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
+      <!-- Modal Close Button -->
+      <button id="modalCloseBtn" onclick="document.getElementById('mediaModal').close()" class="absolute top-4 left-4 rtl:left-4 rtl:right-auto ltr:right-4 ltr:left-auto z-30 p-2 sm:p-2.5 rounded-full bg-black hover:bg-red-600 text-white transition-all cursor-pointer shadow-lg" aria-label="إغلاق">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+
+      <!-- Dynamic Modal Content Injection Container -->
+      <div id="modalContainer" class="p-5 sm:p-8 max-h-[85vh] overflow-y-auto bg-white text-black">
+        <!-- Injected via app.js -->
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ========================================================================
+       TOAST NOTIFICATION COMPONENT
+       ======================================================================== -->
+  <div id="toastNotice" class="fixed bottom-6 right-4 sm:right-6 rtl:right-4 rtl:sm:right-6 rtl:left-auto ltr:left-4 ltr:sm:left-auto ltr:right-auto ltr:sm:right-6 z-50 bg-white border-2 border-red-600 text-black px-5 py-4 rounded-2xl shadow-2xl hidden items-center gap-3 toast-notice max-w-sm sm:max-w-md">
+    <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-red-600 text-white flex items-center justify-center font-black flex-shrink-0 shadow-md">
+      ✓
+    </div>
+    <div id="toastMessage" class="text-xs sm:text-sm font-black text-black">
+      <!-- Injected dynamically -->
+    </div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

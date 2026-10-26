@@ -1,0 +1,461 @@
+/* ==========================================================================
+   Artiste Dz - Official Brand System: Red & White Editorial Theme
+   High-Contrast Editorial Typography: ALL WORDS IN PURE BLACK (#000000)
+   Centered Titles System & Ultra-Responsive Layouts
+   Founder, Film Critic & Celebrity Interviewer: Halim Zerrouki
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;500;600;700;800;900&family=Frank+Ruhl+Libre:wght@400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  /* Brand Red & White Core */
+  --brand-red: #e50914;
+  --brand-red-hover: #b80710;
+  --brand-red-light: #ff3344;
+  --brand-red-soft: #fef2f2;
+  --brand-red-border: rgba(229, 9, 20, 0.3);
+  --brand-red-glow: rgba(229, 9, 20, 0.35);
+
+  --brand-white: #ffffff;
+  --brand-white-pure: #ffffff;
+
+  /* Editorial Light Paper Palette (Writer Home 4 Signature) */
+  --bg-canvas: #ffffff;
+  --bg-warm-paper: #faf9f6;
+  --bg-light-paper: #f8f9fa;
+  --bg-card: #ffffff;
+  --bg-card-hover: #ffffff;
+
+  /* ALL WORDS IN BLACK */
+  --text-dark: #000000;
+  --text-dark-headings: #000000;
+  --text-body: #000000;
+  --text-muted: #000000;
+  --text-light: #000000;
+
+  /* Borders & Dividers */
+  --border-light: #e5e7eb;
+  --border-subtle: #f3f4f6;
+  --border-red: rgba(229, 9, 20, 0.3);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px -1px rgba(0, 0, 0, 0.06);
+  --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 16px 36px -6px rgba(229, 9, 20, 0.12), 0 6px 16px -4px rgba(0, 0, 0, 0.05);
+  --shadow-btn-red: 0 8px 24px -4px rgba(229, 9, 20, 0.4);
+}
+
+/* Base resets & typography */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-canvas);
+  color: #000000 !important;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+section {
+  scroll-margin-top: 5.5rem;
+}
+
+::selection {
+  background-color: var(--brand-red);
+  color: #ffffff;
+}
+
+/* RTL Specific typography for Arabic */
+[dir="rtl"] body,
+[dir="rtl"] {
+  font-family: 'Cairo', system-ui, sans-serif;
+  letter-spacing: 0;
+}
+
+/* Serif Headings (Writer Home 4 Inspired) */
+.font-editorial {
+  font-family: 'Frank Ruhl Libre', 'Amiri', 'Lora', serif;
+}
+
+[dir="rtl"] .font-editorial {
+  font-family: 'Amiri', 'Cairo', serif;
+}
+
+/* Custom Scrollbar in Red & White */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f2f4;
+}
+::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 9999px;
+  border: 2px solid #f1f2f4;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-red);
+}
+
+/* ==========================================================================
+   CENTERED TITLES SYSTEM (Requested by user: Center all titles)
+   ========================================================================== */
+
+/* Centered Subtitle with Red Accents on Both Sides */
+.writer-subtitle {
+  font-family: 'Plus Jakarta Sans', 'Cairo', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #000000 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.writer-subtitle::before,
+.writer-subtitle::after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 2.5px;
+  background-color: var(--brand-red);
+  border-radius: 9999px;
+}
+
+/* Centered Main Titles */
+.writer-title {
+  font-family: 'Frank Ruhl Libre', 'Amiri', 'Lora', serif;
+  font-size: 1.875rem;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #000000 !important;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 640px) {
+  .writer-title {
+    font-size: 2.35rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .writer-title {
+    font-size: 2.85rem;
+  }
+}
+
+[dir="rtl"] .writer-title {
+  font-family: 'Amiri', 'Cairo', serif;
+  line-height: 1.35;
+}
+
+/* Universal Rule: ALL WORDS IN BLACK */
+body, 
+p, 
+span, 
+h1, h2, h3, h4, h5, h6, 
+a, 
+label, 
+input, 
+textarea, 
+select, 
+li, 
+td, th, 
+blockquote, 
+cite,
+.writer-title,
+.writer-subtitle,
+.editorial-text {
+  color: #000000 !important;
+}
+
+/* Exceptions for White Text on Red or Dark Elements */
+.btn-brand-red,
+.btn-brand-red *,
+.badge-red,
+.badge-red *,
+.bg-red-600,
+.bg-red-600 *,
+.bg-red-700,
+.bg-red-700 *,
+.text-white,
+.text-white *,
+[data-lang-btn].bg-red-600,
+.hero-action-btn-red,
+.hero-action-btn-red * {
+  color: #ffffff !important;
+}
+
+/* Hover Accent for links */
+a:hover {
+  color: var(--brand-red) !important;
+}
+
+/* Writer Home 4 Card System */
+.writer-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-card);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.writer-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--brand-red);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Red & White Buttons */
+.btn-brand-red {
+  background: linear-gradient(135deg, #ff2a3a 0%, #e50914 50%, #b80710 100%);
+  color: #ffffff !important;
+  font-weight: 900;
+  box-shadow: var(--shadow-btn-red);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-brand-red:hover {
+  background: linear-gradient(135deg, #ff4d5a 0%, #f40b17 50%, #c90912 100%);
+  box-shadow: 0 12px 30px -4px rgba(229, 9, 20, 0.55);
+  transform: translateY(-1.5px);
+}
+
+.btn-brand-outline {
+  background: #ffffff;
+  color: #000000 !important;
+  border: 1.5px solid #000000;
+  font-weight: 800;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-brand-outline:hover {
+  border-color: var(--brand-red);
+  color: var(--brand-red) !important;
+  background: var(--brand-red-soft);
+  transform: translateY(-1.5px);
+}
+
+/* Red Badges & Tags */
+.badge-red {
+  background: var(--brand-red);
+  color: #ffffff !important;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.6875rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  box-shadow: 0 2px 8px -1px rgba(229, 9, 20, 0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-red-soft {
+  background: var(--brand-red-soft);
+  color: var(--brand-red) !important;
+  border: 1px solid rgba(229, 9, 20, 0.25);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.6875rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.badge-white {
+  background: #ffffff;
+  color: #000000 !important;
+  border: 1px solid #000000;
+  font-weight: 800;
+  font-size: 0.6875rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+}
+
+/* Play button pulse in Red */
+.play-btn-pulse {
+  position: relative;
+}
+.play-btn-pulse::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 9999px;
+  background: var(--brand-red);
+  opacity: 0.85;
+  animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  z-index: 0;
+}
+@keyframes pulse-ring {
+  0% { transform: scale(0.9); opacity: 0.85; }
+  50% { transform: scale(1.35); opacity: 0; }
+  100% { transform: scale(1.35); opacity: 0; }
+}
+
+/* Slider progress timer bar */
+.slide-progress-bar {
+  height: 3px;
+  background: rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  position: relative;
+}
+.slide-progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  background: var(--brand-red);
+  transition: width 0.1s linear;
+}
+[dir="rtl"] .slide-progress-fill {
+  left: auto;
+  right: 0;
+}
+
+/* Infinite Marquee Animation for Collaborations */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 35s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+[dir="rtl"] .marquee-track {
+  animation: marquee-scroll-rtl 35s linear infinite;
+}
+[dir="rtl"] .marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll-rtl {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); }
+}
+
+/* Ticker marquee with Black Text */
+.ticker-wrap {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.ticker-content {
+  display: inline-flex;
+  animation: ticker 45s linear infinite;
+  color: #000000 !important;
+  font-weight: 700;
+}
+.ticker-content:hover {
+  animation-play-state: paused;
+}
+@keyframes ticker {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+[dir="rtl"] .ticker-content {
+  animation: ticker-rtl 45s linear infinite;
+}
+@keyframes ticker-rtl {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(50%, 0, 0); }
+}
+
+/* Native Modal Dialog Styling */
+dialog {
+  padding: 0;
+  border: none;
+  background: transparent;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+dialog[open] {
+  animation: modal-zoom 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes modal-zoom {
+  from { opacity: 0; transform: scale(0.95) translateY(12px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Image Zoom Effect on Cards */
+.img-zoom-container {
+  overflow: hidden;
+}
+.img-zoom-target {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.img-zoom-container:hover .img-zoom-target {
+  transform: scale(1.08);
+}
+
+/* Editorial Pull Quote Box */
+.writer-pullquote {
+  border-left: 4px solid var(--brand-red);
+  background: #ffffff;
+  padding: 1.5rem 1.75rem;
+  border-radius: 0 1rem 1rem 0;
+  border: 1px solid var(--border-light);
+  border-left-width: 4px;
+}
+[dir="rtl"] .writer-pullquote {
+  border-left: 1px solid var(--border-light);
+  border-right: 4px solid var(--brand-red);
+  border-radius: 1rem 0 0 1rem;
+}
+
+/* Toast Notice Animation */
+.toast-notice {
+  animation: slide-toast 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes slide-toast {
+  from { opacity: 0; transform: translateY(20px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Mobile Drawer Smooth Slide */
+#mobileMenu {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+}
+
+/* Responsive Container Adjustments */
+@media (max-width: 640px) {
+  .slide-item {
+    min-height: 580px !important;
+  }
+}
